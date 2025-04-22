@@ -35,9 +35,9 @@ export const HeaderComponent: React.FC<HeaderTypes> = ({
     [],
   );
 
-  const reset = useCallback(() => {
+  const reset = () => {
     setNewTodo(prevState => ({ ...prevState, title: '' }));
-  }, []);
+  };
 
   const onSubmit = useCallback(
     (event: React.FormEvent<HTMLFormElement>) => {
@@ -101,7 +101,7 @@ export const HeaderComponent: React.FC<HeaderTypes> = ({
           throw new Error(err);
         });
     },
-    [handleLoaderId, newTodo, reset, setCustomError, setTodos, titleField],
+    [handleLoaderId, newTodo, setCustomError, setTodos, titleField],
   );
 
   useEffect(() => {

@@ -25,7 +25,6 @@ export const TodoItemComponent: React.FC<TodoItemTypes> = ({
         {title}
       </span>
 
-      {/* Remove button appears only on hover */}
       <button
         onClick={() => deleteTodoHandler(todo)}
         type="button"
@@ -35,7 +34,6 @@ export const TodoItemComponent: React.FC<TodoItemTypes> = ({
         ×
       </button>
 
-      {/* overlay will cover the todo while it is being deleted or updated */}
       <div
         data-cy="TodoLoader"
         className={classNames('modal overlay', {

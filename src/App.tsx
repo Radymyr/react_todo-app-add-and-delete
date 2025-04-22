@@ -143,7 +143,6 @@ export const App: React.FC = () => {
           customError={customError}
           setCustomError={setCustomError}
         />
-        {/* Hide the footer if there are no todos */}
         <FooterComponent
           isHaveOneCompleted={isHaveOneCompleted}
           todos={todos}

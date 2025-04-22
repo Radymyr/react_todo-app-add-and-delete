@@ -17,10 +17,9 @@ export const FooterComponent: React.FC<FooterTypes> = ({
     todos.length > 0 && (
       <footer className="todoapp__footer" data-cy="Footer">
         <span className="todo-count" data-cy="TodosCounter">
-          {todoCounter} items left
+          {todoCounter} {todoCounter === 1 ? 'item' : 'items'} left
         </span>
 
-        {/* Active link should have the 'selected' class */}
         <nav className="filter" data-cy="Filter">
           {Object.values(Statuses).map(status => (
             <a
@@ -37,7 +36,6 @@ export const FooterComponent: React.FC<FooterTypes> = ({
           ))}
         </nav>
 
-        {/* this button should be disabled if there are no completed todos */}
         <button
           disabled={!isHaveOneCompleted}
           type="button"
